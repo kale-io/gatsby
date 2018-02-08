@@ -1,8 +1,6 @@
-jest.mock(`path`, () => {
-  return {
+jest.mock(`path`, () => ({
     resolve: () => ``,
-  }
-})
+  }))
 const {
   resolvableExtensions,
   modifyWebpackConfig,
