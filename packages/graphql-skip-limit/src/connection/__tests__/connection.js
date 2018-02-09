@@ -58,14 +58,12 @@ const { connectionType: friendConnection } = connectionDefinitions({
 
 const queryType = new GraphQLObjectType({
   name: `Query`,
-  fields: () => {
-    return {
+  fields: () => ({
       user: {
         type: userType,
         resolve: () => allUsers[0],
       },
-    }
-  },
+    }),
 })
 
 const schema = new GraphQLSchema({
