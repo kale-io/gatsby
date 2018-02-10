@@ -1,9 +1,7 @@
-jest.mock(`fs-extra`, () => {
-  return {
+jest.mock(`fs-extra`, () => ({
     existsSync: () => false,
     copy: jest.fn(),
-  }
-})
+  })) 
 const Remark = require(`remark`)
 const fsExtra = require(`fs-extra`)
 const path = require(`path`)
