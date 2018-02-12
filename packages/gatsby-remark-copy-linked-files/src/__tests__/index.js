@@ -22,14 +22,12 @@ describe(`gatsby-remark-copy-linked-files`, () => {
   const markdownNode = {
     parent: {},
   }
-  const getNode = () => {
-    return {
+  const getNode = () => ({
       dir: ``,
       internal: {
         type: `File`,
       },
-    }
-  }
+    })
   const getFiles = filePath => [
     {
       absolutePath: path.posix.normalize(filePath),
