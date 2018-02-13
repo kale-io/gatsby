@@ -9,7 +9,8 @@ import {
 export const nodeInterface = new GraphQLInterfaceType({
   name: `Node`,
   description: `An object with an id, parent, and children`,
-  fields: () => ({
+  fields: () => {
+    return {
       id: {
         type: new GraphQLNonNull(GraphQLID),
         description: `The id of the node.`,
@@ -22,5 +23,6 @@ export const nodeInterface = new GraphQLInterfaceType({
         type: new GraphQLList(nodeInterface),
         description: `The children of this node.`,
       },
-    }),
+    }
+  },
 })
