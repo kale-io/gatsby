@@ -6,6 +6,8 @@
 
 <img alt="Gatsby" src="https://www.gatsbyjs.org/gatsby-negative.svg" width="100">
 
+foo
+
 # Gatsby
 
 ⚛️📄🚀 Blazing-fast static site generator for React
