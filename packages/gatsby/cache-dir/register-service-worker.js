@@ -8,7 +8,7 @@ if (__PREFIX_PATHS__) {
 if (`serviceWorker` in navigator) {
   navigator.serviceWorker
     .register(`${pathPrefix}sw.js`)
-    .then(reg => {
+    .then(function(reg) {
       reg.addEventListener(`updatefound`, () => {
         // The updatefound event implies that reg.installing is set; see
         // https://w3c.github.io/ServiceWorker/#service-worker-registration-updatefound-event
@@ -38,7 +38,7 @@ if (`serviceWorker` in navigator) {
         })
       })
     })
-    .catch(e => {
+    .catch(function(e) {
       console.error(`Error during service worker registration:`, e)
     })
 }
