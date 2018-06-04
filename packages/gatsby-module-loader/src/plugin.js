@@ -1,6 +1,6 @@
-module.exports = function() {}
-module.exports.prototype.apply = function(compiler) {
-  compiler.plugin(`compilation`, function(compilation) {
+module.exports = () => {}
+module.exports.prototype.apply = compiler => {
+  compiler.plugin(`compilation`, compilation => {
     compilation.mainTemplate.plugin(`require-extensions`, function(
       source,
       chunk,
