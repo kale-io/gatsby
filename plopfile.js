@@ -1,4 +1,4 @@
-module.exports = function(plop) {
+module.exports = plop => {
   // Add new package
   plop.setGenerator(`package`, {
     description: `This is sets up the basic files for a new package.`,
